@@ -1,0 +1,56 @@
+/* import globals references */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Resst css of default margins & padding. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Here define colors */
+/* Root */
+:root {
+    /* -------------Colors---------------- */
+    /* --PRIMARY COLOR */
+    --primary_color: #ffffff;
+    --primary_color_100: #fafafa;
+    --primary_color_200: #f5f5f5;
+    --primary_color_300: #f0f0f0;
+    --primary_color_400: #dedede;
+    --primary_color_500: #c2c2c2;
+    --primary_color_600: #979797;
+    --primary_color_700: #818181;
+    --primary_color_800: #606060;
+    --primary_color_900: #3c3c3c;
+    /* --SECONDARY COLOR */
+    --secondary_color_50: #EFF6FF;
+    --secondary_color_100: #DBEAFE;
+    --secondary_color_200: #BFDBFE;
+    --secondary_color_300: #93C5FD;
+    --secondary_color_400: #60A5FA;
+    --secondary_color_500: #3B82F6;
+    --secondary_color_600: #2563EB;
+    --secondary_color_700: #1D4ED8;
+    --secondary_color_800: #1E40AF;
+    --secondary_color_900: #1E3A8A;
+    /* For dark mode */
+    --primary_dark_color_900: #121212;
+    --primary_dark_color_800: #323232;
+    --primary_dark_color_700: #505050;
+    --primary_dark_color_600: #636363;
+    --primary_dark_color_500: #8a8a8a;
+    --primary_dark_color_400: #ababab;
+    --primary_dark_color_300: #d0d0d0;
+    --primary_dark_color_200: #e2e2e2;
+    --primary_dark_color_100: #eeeeee;
+    --primary_dark_color_50: #f7f7f7;
+
+    /* ---------------------FONT----------------------- */
+    /* --PRIMARY FONT */
+    --primary_font: 'Lato', sans-serif;
+}
+
+/* Tailwindcss.com */
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
