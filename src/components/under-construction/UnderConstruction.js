@@ -11,8 +11,6 @@ const UnderConstruction = () => {
                         <div>
                             <h1>Coming soon</h1>
                             <h6>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy
                             </h6>
                             <button>Explore product</button>
                         </div>
