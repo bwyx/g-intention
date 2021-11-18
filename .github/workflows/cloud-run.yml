@@ -1,50 +1,39 @@
-name: nextjs-cloud-run
-
+name: cloudrun-deploy
 on:
   push:
     branches:
-      - master
       - main
-
-env:
-  GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
-  CLOUD_RUN_REGION: us-central1
-  # project-name but it can be anything you want
-  REPO_NAME: ${{ secrets.GCP_APPLICATION }}
-
 jobs:
-  build-and-deploy:
-    name: Setup, Build, and Deploy
+  setup-build-publish-deploy:
+    name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
     steps:
-
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@master
 
-    # This step is where our service account will be authenticated
-    - uses: google-github-actions/setup-gcloud@v0.2.0
+    # Setup gcloud CLI
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
-        project_id: ${{ secrets.GCP_PROJECT }}
-        service_account_key: ${{ secrets.GCP_CREDENTIALS }}
         service_account_email: ${{ secrets.GCP_EMAIL }}
-
-    - name: Enable the necessary APIs and enable docker auth
-      run: |-
-        gcloud services enable containerregistry.googleapis.com
-        gcloud services enable run.googleapis.com
-        gcloud --quiet auth configure-docker
-    - name: Build and tag image
-      run: |-
-        docker build . --tag "gcr.io/$GCP_PROJECT/$REPO_NAME:$GITHUB_SHA"
-    - name: Push image to GCR
-      run: |-
-        docker push gcr.io/$GCP_PROJECT/$REPO_NAME:$GITHUB_SHA
+        service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+        export_default_credentials: true
+    
+    # Configure Docker with Credentials
+    - name: Configure Docker
+      run: |
+        gcloud auth configure-docker
+      
+    # Build the Docker image
+    - name: Build & Publish
+      run: |
+        gcloud config set project ${{ secrets.GCP_PROJECT }}
+        gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }}
+        gcloud config set run/region us-central1
+      
+    # Deploy the Docker image to the GKE cluster
     - name: Deploy
-      run: |-
-        gcloud components install beta --quiet
-        gcloud beta run deploy $REPO_NAME --image gcr.io/$GCP_PROJECT/$REPO_NAME:$GITHUB_SHA \
-          --project $GCP_PROJECT \
-          --platform managed \
-          --region $CLOUD_RUN_REGION \
-          --allow-unauthenticated \
-          --quiet
+      run: |
+        gcloud run deploy ${{ secrets.GCP_APPLICATION }} --image gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }} \
+        --platform managed \
+        --allow-unauthenticated \
+        --memory 512M
