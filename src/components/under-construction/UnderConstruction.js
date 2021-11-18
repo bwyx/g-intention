@@ -9,7 +9,7 @@ const UnderConstruction = () => {
                 <div className="under-construction-container">
                     <div>
                         <div>
-                            <h1>Coming soon to the world</h1>
+                            <h1>it'll work</h1>
                             <h6>
                             </h6>
                             <button>Explore product</button>
