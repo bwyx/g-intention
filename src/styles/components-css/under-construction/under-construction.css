@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    @apply bg-primary;
+    @apply bg-primary_200;
 }
 
 .under-construction-container {
