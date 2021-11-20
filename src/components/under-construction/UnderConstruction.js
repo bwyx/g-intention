@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import illustration from '../../public/assets/illustration/working.svg'
 
 const UnderConstruction = () => {
@@ -8,11 +9,14 @@ const UnderConstruction = () => {
             <div className="under-construction-main-body">
                 <div className="under-construction-container">
                     <div>
-                        <div>
-                            <h1>This is pushing by ceo</h1>
-                            <h6>
-                            </h6>
-                            <button>Explore product</button>
+                        <div className="coming-soon-container">
+                            <h1>Coming Soon</h1>
+                            <h6>We're working on that's why we're on the way.
+                                Until take a breath and explore our product.</h6>
+                     <Link href="https://gogomet.com/">
+                        <button>Explore product<span className="material-icons-round">apps</span></button>
+                    </Link>
+                            
                         </div>
                     </div>
                     <div>
