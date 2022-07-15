@@ -12,9 +12,9 @@ const UnderConstruction = () => {
                         <div className="coming-soon-container">
                             <h1>Coming Soon</h1>
                             <h6>We're working on that's why we're on the way.
-                                Until take a breath and explore our product.</h6>
+                                Until take a breath and explore our products.</h6>
                      <Link href="https://gogomet.com/">
-                        <button>Explore product<span className="material-icons-round">apps</span></button>
+                        <button>Explore products<span className="material-icons-round">apps</span></button>
                     </Link>
                             
                         </div>
