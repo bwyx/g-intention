@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import UnderConstruction from '../components/under-construction/UnderConstruction'
+import HomePage from './home/HomePage'
 
+// Start the code from here
 export default function Home() {
   return (
-    <>
+    < >
       <Head>
         <title>G-INTENTION</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -14,7 +15,7 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <UnderConstruction/>
+    <HomePage/>
   </>
   )
 }

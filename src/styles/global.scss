@@ -1,9 +1,13 @@
 /* import globals references */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 /* Resst css of default margins & padding. */
 * {
   margin: 0;
   padding: 0;
+}
+html{
+  font-size: 1px;
 }
 
 /* Here define colors */
@@ -47,6 +51,7 @@
     /* ---------------------FONT----------------------- */
     /* --PRIMARY FONT */
     --primary_font: 'Lato', sans-serif;
+    --g-intention_font: 'Squada One', cursive;
 }
 
 /* Tailwindcss.com */

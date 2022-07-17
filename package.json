@@ -9,15 +9,30 @@
   "dependencies": {
     "autoprefixer": "^10.4.0",
     "material-icons": "^1.10.2",
-    "next": "^12.0.4",
+    "next": "^12.2.2",
     "postcss": "^8.3.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "tailwindcss": "^2.2.19"
+    "sass": "^1.53.0",
+    "swiper": "^8.3.1"
   },
   "devDependencies": {
+    "tailwindcss": "^3.1.6",
     "webpack": "^5.64.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.5.0"
-  }
+  },
+  "description": "This examples shows how to use Docker with Next.js based on the [deployment documentation](https://nextjs.org/docs/deployment#docker-image). Additionally, it contains instructions for deploying to Google Cloud Run. However, you can use any container-based deployment host.",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-intention/g-intention.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-intention/g-intention/issues"
+  },
+  "homepage": "https://github.com/g-intention/g-intention#readme"
 }
