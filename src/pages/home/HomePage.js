@@ -32,11 +32,11 @@ const HomePage = () => {
         className="mySwiper"
       >
       <SwiperSlide> <Overview/> </SwiperSlide>
-      {/* <SwiperSlide> <VisionMission/> </SwiperSlide>
+      <SwiperSlide> <VisionMission/> </SwiperSlide>
       <SwiperSlide> <Team/> </SwiperSlide>
       <SwiperSlide> <Milestones/> </SwiperSlide>
       <SwiperSlide> <Products/> </SwiperSlide>
-      <SwiperSlide> <TouchWithUs/> </SwiperSlide> */}
+      <SwiperSlide> <TouchWithUs/> </SwiperSlide>
     </Swiper>
     </>
     );

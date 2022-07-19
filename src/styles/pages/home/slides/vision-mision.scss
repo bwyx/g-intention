@@ -1,0 +1,51 @@
+.vision_mission_container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    .container {
+        width: 80vw;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        div {
+            width: 100%;
+            height: auto;
+            text-align: right;
+
+            .right {
+                float: right;
+            }
+
+            .left {
+                float: left;
+            }
+
+            div {
+                width: 50%;
+                display: grid;
+                place-items: center;
+
+                span {
+                    flex-grow: 0;
+                    font-family: Roboto;
+                    font-size: 24px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.33;
+                    letter-spacing: 0.05px;
+                    text-align: left;
+                    color: #818181;
+                }
+            }
+
+        }
+    }
+}
