@@ -6,7 +6,7 @@
     place-items: center;
 
     .container {
-        width: 80vw;
+        width: var(--left-rigght-slide_padding);
         height: auto;
         position: absolute;
         left: 50%;

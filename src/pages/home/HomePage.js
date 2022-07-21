@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Mousewheel, Pagination } from "swiper";
+import { Pagination } from "swiper";
 
 // Import Slides
 import Overview from "./slides/Overview";
@@ -22,13 +22,10 @@ const HomePage = () => {
      <>
      <Swiper
         direction={"vertical"}
-        slidesPerView={1}
-        mousewheel={true}
         pagination={{
-            type: "progressbar",
-            clickable: true,
+          clickable: true,
         }}
-        modules={[Mousewheel, Pagination]}
+        modules={[Pagination]}
         className="mySwiper"
       >
       <SwiperSlide> <Overview/> </SwiperSlide>

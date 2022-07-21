@@ -1,0 +1,58 @@
+.slide_team {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    .container {
+        width: var(--left-rigght-slide_padding);
+        height: var(--top-bottom-slide_padding);
+
+        .slide_header {
+            width: 100%;
+            padding: 10rem;
+
+            span {
+                flex-grow: 0;
+                font-family: var(--primary_font);
+                font-size: 20rem;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.02px;
+                text-align: left;
+                color: var(--primary_color_900);
+            }
+        }
+
+        .founder {
+            width: 100%;
+            height: fit-content;
+            padding-left: 15%;
+            padding-right: 15%;
+            height: fit-content;
+            display: grid;
+            flex-direction: row;
+            row-gap: 24rem;
+        }
+
+        .team_members {
+            width: 100%;
+            height: fit-content;
+            display: grid;
+            flex-direction: row;
+
+            .menu_bar {
+                width: 100%;
+                height: fit-content;
+                padding: 10rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                column-gap: 18rem;
+            }
+        }
+
+    }
+}

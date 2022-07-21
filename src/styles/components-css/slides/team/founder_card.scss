@@ -1,0 +1,190 @@
+// -------LEFT FOUNDER CARD ---------
+.left_founder_card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 31rem;
+    position: relative;
+
+    .founder_profile {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+
+        .details {
+            width: fit-content;
+            height: fit-content;
+            display: grid;
+            flex-direction: row;
+            row-gap: 5rem;
+            position: absolute;
+            left: 80%;
+            top: 70%;
+
+
+            .basic_info {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+
+                .founder_name {
+                    flex-grow: 0;
+                    font-family: var(--primary_font);
+                    font-size: 24rem;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.33;
+                    letter-spacing: 0.05px;
+                    text-align: left;
+                    color: var(--primary_color_900);
+                }
+
+                hr {
+                    width: 100%;
+                    height: 2rem;
+                    flex-grow: 0;
+                    background-color: var(--primary_color_900);
+                }
+
+                .position_roll {
+                    flex-grow: 0;
+                    font-family: var(--primary_font);
+                    font-size: 12rem;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: var(--primary_color_900);
+                }
+            }
+
+            .social_icon {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                column-gap: 6rem;
+
+            }
+        }
+
+    }
+
+    .quotes {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 63rem;
+
+        span {
+            font-family: var(--primary_font);
+            font-size: 24px;
+            font-weight: 400;
+            font-stretch: normal;
+            font-style: italic;
+            line-height: 1.33;
+            letter-spacing: 0.05px;
+            text-align: left;
+            color: var(--primary_color_700);
+        }
+    }
+
+
+}
+
+// -------RIGHT FOUNDER CARD ---------
+.right_founder_card {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    column-gap: 31rem;
+    position: relative;
+
+    .founder_profile {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+
+        .details {
+            width: fit-content;
+            height: fit-content;
+            display: grid;
+            flex-direction: row;
+            row-gap: 5rem;
+            position: absolute;
+            left: -60%;
+            top: 70%;
+
+
+            .basic_info {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+
+                .founder_name {
+                    flex-grow: 0;
+                    font-family: var(--primary_font);
+                    font-size: 24rem;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.33;
+                    letter-spacing: 0.05px;
+                    text-align: left;
+                    color: var(--primary_color_900);
+                }
+
+                hr {
+                    width: 100%;
+                    height: 2rem;
+                    flex-grow: 0;
+                    background-color: var(--primary_color_900);
+                }
+
+                .position_roll {
+                    flex-grow: 0;
+                    font-family: var(--primary_font);
+                    font-size: 12rem;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: var(--primary_color_900);
+                }
+            }
+
+            .social_icon {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                column-gap: 6rem;
+
+            }
+        }
+
+    }
+
+    .quotes {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 63rem;
+
+        span {
+            font-family: var(--primary_font);
+            font-size: 24px;
+            font-weight: 400;
+            font-stretch: normal;
+            font-style: italic;
+            line-height: 1.33;
+            letter-spacing: 0.05px;
+            text-align: left;
+            color: var(--primary_color_700);
+        }
+    }
+
+
+}
