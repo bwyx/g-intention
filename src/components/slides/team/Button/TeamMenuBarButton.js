@@ -1,10 +1,18 @@
-import React from "react"
+import React, {useState} from 'react';
 
 
-const TeamMenuBarButton = (props) => {
+const TeamMenuBarButton = ({toggleActiveStyle, FilterMenu, PositionValues }) => {
+    
     return ( 
         <>
-            <div className="team_menu_bar_button"><span>{props.label}</span></div>
+            
+            {
+                PositionValues.map((curElem, index) => {
+                    return <div className={toggleActiveStyle(index)} key={index} onClick={() => FilterMenu(curElem, index)}> <span>{curElem}</span></div>
+                
+                })
+            }
+            
         </>
      );
 }

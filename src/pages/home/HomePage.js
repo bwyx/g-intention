@@ -13,6 +13,7 @@ import { Pagination } from "swiper";
 import Overview from "./slides/Overview";
 import VisionMission from "./slides/VisionMission";
 import Team from "./slides/Team";
+import Founder from "./slides/Founder";
 import Milestones from "./slides/Milestones";
 import Products from "./slides/Products";
 import TouchWithUs from "./slides/TouchWithUs";
@@ -20,21 +21,25 @@ import TouchWithUs from "./slides/TouchWithUs";
 const HomePage = () => {
     return (
      <>
-     <Swiper
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-      <SwiperSlide> <Overview/> </SwiperSlide>
-      <SwiperSlide> <VisionMission/> </SwiperSlide>
-      <SwiperSlide> <Team/> </SwiperSlide>
-      <SwiperSlide> <Milestones/> </SwiperSlide>
-      <SwiperSlide> <Products/> </SwiperSlide>
-      <SwiperSlide> <TouchWithUs/> </SwiperSlide>
-    </Swiper>
+     <div className="main_slide_container">
+          <Swiper
+              direction={"vertical"}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+            <SwiperSlide> <Overview/> </SwiperSlide>
+            <SwiperSlide> <VisionMission/> </SwiperSlide>
+            <SwiperSlide> <Founder/> </SwiperSlide>
+            {/* <SwiperSlide> <Team/> </SwiperSlide> */}
+            <SwiperSlide> <Milestones/> </SwiperSlide>
+            <SwiperSlide> <Products/> </SwiperSlide>
+            <SwiperSlide> <TouchWithUs/> </SwiperSlide>
+          </Swiper>
+     </div>
+    
     </>
     );
 }

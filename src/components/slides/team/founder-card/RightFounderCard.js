@@ -19,7 +19,7 @@ const RightFounderCard = (props) => {
             <div className="details">
                 <div className="basic_info">
                     < span className = "founder_name" >{props.founder_name}</span>
-                    <hr/>
+                    <div className="divider"></div>
                     <span className="position_roll">{props.founder_position_roll}</span>
                 </div>
                 <div className="social_icon">

@@ -1,0 +1,39 @@
+.slide_founder {
+    width: 100%;
+    height: 100%;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: var(--slide_padding);
+
+        .slide_header {
+            width: 100%;
+            height: fit-content;
+
+            span {
+                flex-grow: 0;
+                font-family: var(--primary_font);
+                font-size: 20rem;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.02px;
+                text-align: left;
+                color: var(--primary_color_900);
+            }
+        }
+
+        .founder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            padding-left: 200rem;
+            padding-right: 200rem;
+            grid-template-rows: repeat(2, 1fr);
+            align-items: center;
+        }
+
+    }
+}

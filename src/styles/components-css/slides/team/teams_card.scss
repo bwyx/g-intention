@@ -1,0 +1,67 @@
+.teams_card {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+
+    .details {
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        left: 60%;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 6rem;
+        padding: 6rem;
+        border-radius: 6rem;
+        background-color: var(--primary_color);
+        box-shadow: 0 4px 4px -2px rgba(24, 39, 75, 0.08), 0 2px 4px -2px rgba(24, 39, 75, 0.12);
+
+        .team_name_job_roll {
+
+
+            .name {
+                flex-grow: 0;
+                font-family: var(--primary_font);
+                font-size: 16rem;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.02px;
+                text-align: left;
+                color: var(--primary_color_900);
+            }
+
+            .divider {
+                width: 100%;
+                height: 1rem;
+                background-color: var(--primary_color_800);
+            }
+
+            .job_roll {
+                flex-grow: 0;
+                font-family: var(--primary_font);
+                font-size: 10rem;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: var(--primary_color_900);
+            }
+
+        }
+
+        .social_icon {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
+
+    }
+}

@@ -8,6 +8,7 @@ import '../styles/global.scss'; // global
 import '../styles/pages/home/home.scss'; // home
 import '../styles/pages/home/slides/overview.scss'; // overview
 import '../styles/pages/home/slides/vision-mision.scss'; // vision & mision
+import '../styles/pages/home/slides/founder.scss'; // founder
 import '../styles/pages/home/slides/team.scss'; // team
 import '../styles/pages/home/slides/milestones.scss'; // milestones
 import '../styles/pages/home/slides/products.scss'; // products

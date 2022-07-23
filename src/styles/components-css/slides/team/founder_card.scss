@@ -16,7 +16,7 @@
             height: fit-content;
             display: grid;
             flex-direction: row;
-            row-gap: 5rem;
+            gap: 5rem;
             position: absolute;
             left: 80%;
             top: 70%;
@@ -40,11 +40,10 @@
                     color: var(--primary_color_900);
                 }
 
-                hr {
+                .divider {
                     width: 100%;
-                    height: 2rem;
-                    flex-grow: 0;
-                    background-color: var(--primary_color_900);
+                    height: 1rem;
+                    background-color: var(--primary_color_800);
                 }
 
                 .position_roll {
@@ -112,7 +111,7 @@
             height: fit-content;
             display: grid;
             flex-direction: row;
-            row-gap: 5rem;
+            gap: 5rem;
             position: absolute;
             left: -60%;
             top: 70%;
@@ -136,11 +135,10 @@
                     color: var(--primary_color_900);
                 }
 
-                hr {
+                .divider {
                     width: 100%;
-                    height: 2rem;
-                    flex-grow: 0;
-                    background-color: var(--primary_color_900);
+                    height: 1rem;
+                    background-color: var(--primary_color_800);
                 }
 
                 .position_roll {

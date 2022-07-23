@@ -1,10 +1,48 @@
+import React, {useState} from 'react';
 import LeftFounderCard from "../../../components/slides/team/founder-card/LeftFounderCard";
 import RightFounderCard from "../../../components/slides/team/founder-card/RightFounderCard";
+import TeamCard from "../../../components/slides/team/team/TeamCard";
 import HarishSisodiya from '../../../public/assets/harish_sisodiya.svg';
 import AbhishekSingh from '../../../public/assets/abhishek_singh.svg';
 import TeamMenuBarButton from "../../../components/slides/team/Button/TeamMenuBarButton";
+import TeamDataBase from "../../../database/team/TeamDataBase";
+
 
 const Team = () => {
+
+    const allPositionValues = ["All", ...new Set(TeamDataBase.map((curElem) => curElem.position))];
+    const [TeamMembers, setTeamMembers] = useState(TeamDataBase);
+    const [PositionValues, setPositionValues] = useState(allPositionValues);
+    
+    const [appState, changeState] = useState({
+        activeObject: null,
+        TeamDataBase
+    })
+
+    const FilterMenu = (position, index) => {
+
+        changeState({ ...appState, activeObject: appState.TeamDataBase[index] });
+
+        if (position === "All") {
+            setTeamMembers(TeamDataBase);
+            return;
+        }
+        const updatedTeam = TeamDataBase.filter((curElem) => {
+            return curElem.position === position;
+        });
+
+        setTeamMembers(updatedTeam);
+    }
+
+ // Toggle Activate
+    function toggleActiveStyle(index) {
+                if (appState.TeamDataBase[index] === appState.activeObject) {
+                    return "team_menu_bar_button active";
+                } else {
+                    return "team_menu_bar_button inactive";
+                }
+     }
+
 
     return ( 
         <>
@@ -35,10 +73,14 @@ const Team = () => {
                     <div className="team_members">
                         <div className="menu_bar">
                             <TeamMenuBarButton
-                            label="All"
+                            toggleActiveStyle={toggleActiveStyle}
+                            FilterMenu={FilterMenu}
+                            PositionValues={PositionValues}
                             />
                         </div>
-                        <div></div>
+                        <div className="team_card_container">
+                            <TeamCard TeamMembers={TeamMembers}/>
+                        </div>
                     </div>
                 </div>
             </div>
