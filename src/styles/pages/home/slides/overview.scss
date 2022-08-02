@@ -24,14 +24,33 @@
 
             span {
                 flex-grow: 0;
-                font-family: var(--g-intention_font);
+                font-family: var(--primary_font);
                 font-size: 40rem;
-                font-weight: normal;
+                font-weight: 700;
                 font-stretch: normal;
                 font-style: normal;
                 line-height: 1.25;
                 letter-spacing: 0.08px;
                 color: var(--primary_color_900);
+            }
+        }
+    }
+}
+
+// Write for -- RESPONSIVE PAGE
+@media only screen and (max-width: 550px) {
+
+    .slide_overview {
+
+        .container {
+
+
+            div {
+
+                span {
+                    font-size: 24rem;
+                    line-height: 28rem;
+                }
             }
         }
     }

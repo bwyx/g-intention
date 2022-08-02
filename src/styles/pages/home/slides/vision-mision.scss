@@ -1,52 +1,93 @@
 .vision_mission_container {
     width: 100%;
     height: 100%;
-    position: relative;
-    display: grid;
-    place-items: center;
+    font-size: 12rem;
+    font-weight: 600;
+    font-family: var(--primary_font);
 
     .container {
         width: 100%;
         height: 100%;
         padding: var(--slide_padding);
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 24rem;
+        grid-template-rows: 0.1fr repeat(2, 1fr);
+
+        .header {
+            padding: var(--main-padding);
+
+            span {
+                font-family: var(--primary_font);
+                font-size: 20rem;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.02px;
+                text-align: left;
+                color: var(--primary_color_900);
+            }
+        }
 
         div {
-            width: 100%;
-            height: auto;
-            text-align: right;
 
-            .right {
-                float: right;
+            .vision_mission{
+                width: 300rem;
             }
-
-            .left {
-                float: left;
+            span {
+                width: 600rem;
+                height: auto;
+                flex-grow: 0;
+                font-family: var(--primary_font);
+                font-size: 24rem;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.33;
+                letter-spacing: 0.05px;
+                text-align: center;
+                color: var(--primary_color_900);
             }
+        }
 
-            div {
-                width: 50%;
-                display: grid;
-                place-items: center;
-
-                span {
-                    flex-grow: 0;
-                    font-family: Roboto;
-                    font-size: 24px;
-                    font-weight: bold;
-                    font-stretch: normal;
-                    font-style: normal;
-                    line-height: 1.33;
-                    letter-spacing: 0.05px;
-                    text-align: left;
-                    color: #818181;
-                }
-            }
+        .first_div {
+            display: grid;
+            justify-content: end;
 
         }
+
+        .second_div {
+            display: grid;
+            justify-content: start;
+        }
+
+
     }
+}
+
+// Write for -- RESPONSIVE PAGE
+@media only screen and (max-width: 550px) {
+
+   .vision_mission_container{
+
+     .container {
+
+        div {
+            display: grid;
+
+            .vision_mission{
+                width: 200rem;
+                height: auto;
+                background-color: antiquewhite;
+            }
+
+            span {
+                width: fit-content;
+                font-size: 16rem;
+                text-align: center;
+            }
+        }
+
+    }
+   }
+
 }

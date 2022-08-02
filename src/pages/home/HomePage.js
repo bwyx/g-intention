@@ -33,7 +33,7 @@ const HomePage = () => {
             <SwiperSlide> <Overview/> </SwiperSlide>
             <SwiperSlide> <VisionMission/> </SwiperSlide>
             <SwiperSlide> <Founder/> </SwiperSlide>
-            {/* <SwiperSlide> <Team/> </SwiperSlide> */}
+            <SwiperSlide> <Team/> </SwiperSlide>
             <SwiperSlide> <Milestones/> </SwiperSlide>
             <SwiperSlide> <Products/> </SwiperSlide>
             <SwiperSlide> <TouchWithUs/> </SwiperSlide>

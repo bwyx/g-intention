@@ -10,7 +10,7 @@ const Overview = () => {
             <div div className="slide_overview">
                 <Image src={TeamWork} />
                 <div className="container">
-                    <div ><Image src={Logo} height={120} /></div>
+                    <div className="logo"><Image src={Logo} height={120} /></div>
                     <div ><span>The vision is to build a range of products & services that can leave a deep impact on lives.</span></div>
                 </div>
              </div>
