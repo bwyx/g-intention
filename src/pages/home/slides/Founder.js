@@ -15,7 +15,7 @@ const Founder = () => {
                         <LeftFounderCard
                             profile_image={HarishSisodiya}
                             founder_name="Harish Sisodiya"
-                            position_roll="Founder & CEO"
+                            founder_position_roll="Founder & CEO"
                             email="mailto:ceo@g-intention.com"
                             call="tel:+919782152921"
                             linkdin="https://www.linkedin.com/in/harish-sisodiya-886a59183/"
@@ -26,7 +26,7 @@ const Founder = () => {
                         <RightFounderCard
                             profile_image={AbhishekSingh}
                             founder_name="Abhishek Singh"
-                            position_roll="Founder & CTO"
+                            founder_position_roll="Founder & CTO"
                             email="mailto:abhi@g-intention.com"
                             call="tel:+919648364322"
                             linkdin="https://www.linkedin.com/in/iamaking/"

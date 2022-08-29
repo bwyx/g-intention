@@ -21,13 +21,14 @@
 }
 
 // Write for -- RESPONSIVE PAGE
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 850px) {
     .slide_founder {
 
         .container {
 
             .first_container,
             .second_container {
+                background-color: aqua;
                 padding-left: 10rem;
                 padding-right: 10rem;
             }
