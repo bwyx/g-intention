@@ -18,12 +18,12 @@
             flex-direction: row;
             gap: 5rem;
             position: absolute;
-            left: 80%;
+            left: 60%;
             top: 70%;
 
 
-            .basic_info {
-                width: fit-content;
+             .basic_info {
+                width: 180rem;
                 height: fit-content;
                 display: grid;
 
@@ -35,7 +35,7 @@
                     font-stretch: normal;
                     font-style: normal;
                     line-height: 1.33;
-                    letter-spacing: 0.05px;
+                    letter-spacing: 0.05rem;
                     text-align: left;
                     color: var(--primary_color_900);
                 }
@@ -83,7 +83,7 @@
             font-stretch: normal;
             font-style: italic;
             line-height: 1.33;
-            letter-spacing: 0.05px;
+            letter-spacing: 0.05rem;
             text-align: left;
             color: var(--primary_color_700);
         }
@@ -130,7 +130,7 @@
                     font-stretch: normal;
                     font-style: normal;
                     line-height: 1.33;
-                    letter-spacing: 0.05px;
+                    letter-spacing: 0.05rem;
                     text-align: left;
                     color: var(--primary_color_900);
                 }
@@ -184,5 +184,12 @@
         }
     }
 
+
+}
+
+// Write for -- RESPONSIVE PAGE
+@media only screen and (max-width: 550px) {
+
+    
 
 }

@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import LeftFounderCard from "../../../components/slides/team/founder-card/LeftFounderCard";
-import RightFounderCard from "../../../components/slides/team/founder-card/RightFounderCard";
 import TeamCard from "../../../components/slides/team/team/TeamCard";
 import HarishSisodiya from '../../../public/assets/harish_sisodiya.svg';
 import AbhishekSingh from '../../../public/assets/abhishek_singh.svg';

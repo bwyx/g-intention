@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import VisionSvg from "../../../public/assets/vision.svg";
 import MissionSvg from "../../../public/assets/mission.svg";
+import { SlideHeaderWrapper, SlideHeader } from "../../../components/styled/SlideHeader";
 
 const VisionMission = () => {
     return ( 
         <>
             <div className="vision_mission_container">
                 <div className="container">
-                    <section className="header"><span>Vision & Mission</span></section>
+                    <SlideHeaderWrapper><SlideHeader>Vision & Mission</SlideHeader></SlideHeaderWrapper>
                     <div className="first_div">
                         <Image src={VisionSvg}/>
                         <span>The vision is to build a range of products & services that can leave a deep impact on lives.</span>

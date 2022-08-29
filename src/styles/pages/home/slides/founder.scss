@@ -1,10 +1,6 @@
 .slide_founder {
     width: 100%;
     height: 100%;
-    font-size: 12rem;
-    font-weight: 600;
-    font-family: var(--primary_font);
-    text-transform: uppercase;
 
     .container {
         width: 100%;
@@ -12,26 +8,30 @@
         padding: var(--slide_padding);
         display: grid;
         grid-template-rows: 0.1fr repeat(2, 1fr);
-        grid-gap: 5rem;
 
-        .header {
-            background-color: #CEE5D0;
-            border-radius: var(--main-radius);
-            padding: var(--main-padding);
+        .first_container,
+        .second_container {
+            padding-left: 250rem;
+            padding-right: 250rem;
+            display: grid;
+            align-items: center;
         }
 
-        .first_div {
-            background-color: #FCF8E8;
-            border-radius: var(--main-radius);
-            padding: var(--main-padding);
+    }
+}
+
+// Write for -- RESPONSIVE PAGE
+@media only screen and (max-width: 550px) {
+    .slide_founder {
+
+        .container {
+
+            .first_container,
+            .second_container {
+                padding-left: 10rem;
+                padding-right: 10rem;
+            }
+
         }
-
-        .second_div {
-            background-color: #66BFBF;
-            border-radius: var(--main-radius);
-            padding: var(--main-padding);
-        }
-
-
     }
 }
