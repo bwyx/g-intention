@@ -9,28 +9,102 @@
         display: grid;
         grid-template-rows: 0.1fr repeat(2, 1fr);
 
-        .first_container,
-        .second_container {
-            padding-left: 250rem;
-            padding-right: 250rem;
-            display: grid;
-            align-items: center;
-        }
-
     }
 }
 
-// Write for -- RESPONSIVE PAGE
-@media only screen and (max-width: 850px) {
+// -------------- MEDIA QUARY ------------------
+// Write for -- RESPONSIVE PAGE 
+
+// Mobile: 360 x 640
+@media only screen and (max-width: 360px) {
     .slide_founder {
 
         .container {
 
             .first_container,
             .second_container {
-                background-color: aqua;
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+
+        }
+    }
+}
+
+// Mobile: 375 x 667
+@media only screen and (min-width: 375px) {
+    .slide_founder {
+
+        .container {
+
+            .first_container,
+            .second_container {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+
+        }
+    }
+}
+
+// Mobile: 411 x 731
+@media only screen and (min-width: 411px) {
+    .slide_founder {
+
+        .container {
+
+            .first_container,
+            .second_container {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+
+        }
+    }
+}
+
+// Tablet: 768 x 1024
+@media only screen and (min-width: 768px) {
+    .slide_founder {
+
+        .container {
+
+            .first_container,
+            .second_container {
                 padding-left: 10rem;
                 padding-right: 10rem;
+            }
+
+        }
+    }
+}
+
+// Laptop: 1366 x 768
+@media only screen and (min-width: 1366px) {
+    .slide_founder {
+
+        .container {
+
+            .first_container,
+            .second_container {
+                padding-left: 15rem;
+                padding-right: 15rem;
+            }
+
+        }
+    }
+}
+
+// High-res laptop or desktop: 1920 x 1080
+@media only screen and (min-width: 1920px) {
+    .slide_founder {
+
+        .container {
+
+            .first_container,
+            .second_container {
+                padding-left: 250rem;
+                padding-right: 250rem;
             }
 
         }

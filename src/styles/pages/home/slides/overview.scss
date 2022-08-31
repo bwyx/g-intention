@@ -37,9 +37,28 @@
     }
 }
 
-// Write for -- RESPONSIVE PAGE
-@media only screen and (max-width: 550px) {
+// -------------- MEDIA QUARY ------------------
+// Write for -- RESPONSIVE PAGE 
 
+// Mobile: 360 x 640
+@media (min-width: 1px) and (max-width: 360px) {
+    .slide_overview {
+
+        .container {
+
+            div {
+
+                span {
+                    font-size: 20rem;
+                    line-height: 28rem;
+                }
+            }
+        }
+    }
+}
+
+// Mobile: 375 x 667
+@media (min-width: 360px) and (max-width: 375px) {
     .slide_overview {
 
         .container {
@@ -49,6 +68,78 @@
 
                 span {
                     font-size: 24rem;
+                    line-height: 28rem;
+                }
+            }
+        }
+    }
+}
+
+// Mobile: 411 x 731
+@media (min-width: 375px) and (max-width: 411px) {
+    .slide_overview {
+
+        .container {
+
+
+            div {
+
+                span {
+                    font-size: 24rem;
+                    line-height: 28rem;
+                }
+            }
+        }
+    }
+}
+
+// Tablet: 768 x 1024
+@media (min-width: 411px) and (max-width: 768px) {
+    .slide_overview {
+
+        .container {
+
+
+            div {
+
+                span {
+                    font-size: 24rem;
+                    line-height: 28rem;
+                }
+            }
+        }
+    }
+}
+
+// Laptop: 1366 x 768
+@media (min-width: 768px) and (max-width: 1366px) {
+    .slide_overview {
+
+        .container {
+
+
+            div {
+
+                span {
+                    font-size: 24rem;
+                    line-height: 28rem;
+                }
+            }
+        }
+    }
+}
+
+// High-res laptop or desktop: 1920 x 1080
+@media (min-width: 1366px) and (max-width: 1920px) {
+    .slide_overview {
+
+        .container {
+
+
+            div {
+
+                span {
+                    font-size: 40rem;
                     line-height: 28rem;
                 }
             }

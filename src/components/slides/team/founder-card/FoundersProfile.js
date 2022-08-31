@@ -11,7 +11,7 @@ const LeftFounderCard = (props) => {
         <>
         <div className="left_founder_card">
             <div className="founder_profile">
-            <Image src={props.profile_image} />
+            <div className="founder_img"><Image src={props.profile_image} layout="responsive"/></div>
             <div className="details">
                 <div className="basic_info">
                     < span className = "founder_name" >{props.founder_name}</span>
@@ -44,7 +44,7 @@ const RightFounderCard = (props) => {
                     <span>{props.quotes}</span>
             </div>
             <div className="founder_profile">
-            <Image src={props.profile_image} />
+            <div className="founder_img"><Image src={props.profile_image} layout="responsive"/></div>
             <div className="details">
                 <div className="basic_info">
                     < span className="founder_name" >{props.founder_name}</span>

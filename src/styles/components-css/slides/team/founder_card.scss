@@ -7,6 +7,12 @@
     position: relative;
 
     .founder_profile {
+
+        .founder_img {
+            width: 200rem;
+            height: auto;
+        }
+
         width: fit-content;
         height: fit-content;
         position: relative;
@@ -102,6 +108,12 @@
     position: relative;
 
     .founder_profile {
+
+        .founder_img {
+            width: 200rem;
+            height: auto;
+        }
+
         width: fit-content;
         height: fit-content;
         position: relative;
@@ -187,65 +199,5 @@
 
 }
 
-// Write for -- RESPONSIVE PAGE
-
-// Mobile: 360 * 640
-@media only screen and (max-width: 360px) {
-
-    .left_founder_card,
-    .right_founder_card {
-
-        .founder_profile {
-
-            .details {
-
-
-
-                .basic_info {
-
-                    .founder_name {
-                        font-size: 16rem;
-                    }
-
-
-                    .position_roll {
-                        flex-grow: 0;
-                        font-family: var(--primary_font);
-                        font-size: 10rem;
-                        font-weight: bold;
-                        font-stretch: normal;
-                        font-style: normal;
-                        line-height: normal;
-                        letter-spacing: normal;
-                        text-align: left;
-                        color: var(--primary_color_900);
-                    }
-                }
-
-
-            }
-
-        }
-
-        .quotes {
-            width: fit-content;
-            height: fit-content;
-            margin-top: 30rem;
-
-            span {
-                font-family: var(--primary_font);
-                font-size: 14rem;
-                font-weight: 400;
-                font-stretch: normal;
-                font-style: italic;
-                line-height: 1.33;
-                letter-spacing: 0.05px;
-                text-align: left;
-                color: var(--primary_color_700);
-            }
-        }
-
-
-    }
-
-}
+// -------------- MEDIA QUARY ------------------
+// Write for -- RESPONSIVE PAGE 

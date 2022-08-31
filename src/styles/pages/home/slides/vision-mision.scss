@@ -5,18 +5,39 @@
     font-weight: 600;
     font-family: var(--primary_font);
 
-    .container {
+    .parent_container {
         width: 100%;
         height: 100%;
         padding: var(--slide_padding);
         display: grid;
         grid-template-rows: 0.1fr repeat(2, 1fr);
+        grid-template-columns: 1fr;
 
-        div {
+        .first_child_container {
+            display: grid;
+            justify-self: end;
+        }
 
-            .vision_mission{
+        .second_child_container {
+            display: grid;
+            justify-self: start;
+        }
+
+        .first_child_container,
+        .second_child_container {
+            width: 600rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+
+            .svg_vision_mission {
                 width: 300rem;
+                height: auto;
             }
+
+
             span {
                 width: 600rem;
                 height: auto;
@@ -33,44 +54,161 @@
             }
         }
 
-        .first_div {
-            display: grid;
-            justify-content: end;
-
-        }
-
-        .second_div {
-            display: grid;
-            justify-content: start;
-        }
-
 
     }
 }
 
-// Write for -- RESPONSIVE PAGE
-@media only screen and (max-width: 550px) {
 
-   .vision_mission_container{
 
-     .container {
+// -------------- media quary ------------------
+// write for -- responsive page 
 
-        div {
-            display: grid;
+// mobile: 360 x 640
+@media (min-width: 1px) and (max-width: 360px) {
+    .vision_mission_container {
 
-            .vision_mission{
-                width: 200rem;
-                height: auto;
+        .parent_container {
+
+
+            .first_child_container {
+                display: grid;
+                justify-self: center;
             }
 
-            span {
+            .second_child_container {
+                display: grid;
+                justify-self: center;
+            }
+
+            .first_child_container,
+            .second_child_container {
                 width: fit-content;
-                font-size: 16rem;
-                text-align: center;
+
+                .svg_vision_mission {
+                    width: 250rem;
+                }
+
+
+                span {
+                    font-size: 18rem;
+                }
             }
+
+
         }
-
     }
-   }
-
 }
+
+// mobile: 375 x 667
+@media (min-width: 360px) and (max-width: 375px) {
+    .vision_mission_container {
+
+        .parent_container {
+
+
+            .first_child_container {
+                display: grid;
+                justify-self: center;
+            }
+
+            .second_child_container {
+                display: grid;
+                justify-self: center;
+            }
+
+            .first_child_container,
+            .second_child_container {
+                width: fit-content;
+
+                .svg_vision_mission {
+                    width: 250rem;
+                }
+
+
+                span {
+                    font-size: 18rem;
+                }
+            }
+
+
+        }
+    }
+}
+
+// mobile: 411 x 731
+@media (min-width: 375px) and (max-width: 411px) {
+    .vision_mission_container {
+
+        .parent_container {
+
+
+            .first_child_container {
+                display: grid;
+                justify-self: center;
+            }
+
+            .second_child_container {
+                display: grid;
+                justify-self: center;
+            }
+
+            .first_child_container,
+            .second_child_container {
+                width: fit-content;
+
+                .svg_vision_mission {
+                    width: 250rem;
+                }
+
+
+                span {
+                    font-size: 18rem;
+                }
+            }
+
+
+        }
+    }
+}
+
+// tablet: 768 x 1024
+@media (min-width: 411px) and (max-width: 768px) {
+    .vision_mission_container {
+
+        .parent_container {
+
+
+            .first_child_container {
+                display: grid;
+                justify-self: center;
+            }
+
+            .second_child_container {
+                display: grid;
+                justify-self: center;
+            }
+
+            .first_child_container,
+            .second_child_container {
+                width: fit-content;
+
+                .svg_vision_mission {
+                    width: 250rem;
+                }
+
+
+                span {
+                    font-size: 18rem;
+                }
+            }
+
+
+        }
+    }
+}
+
+// laptop: 1366 x 768
+// @media (min-width: 768px) and (max-width: 1366px) {}
+
+// high-res laptop or desktop: 1920 x 1080
+// @media (min-width: 1366px) and (max-width: 1920px) {}
