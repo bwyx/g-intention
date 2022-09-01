@@ -1,21 +1,61 @@
+:root {
+    // Mobile: 360 x 640
+    --founder-img-360: 150rem;
+    --founder-name-360: 15rem;
+    --position-roll-360: 12rem;
+    --quotes-360: 14rem;
+
+    // Mobile: 375 x 667
+    --founder-img-375: 150rem;
+    --founder-name-375: 15rem;
+    --position-roll-375: 12rem;
+    --quotes-375: 14rem;
+
+    // Mobile: 411 x 731
+    --founder-img-411: 150rem;
+    --founder-name-411: 15rem;
+    --position-roll-411: 12rem;
+    --quotes-411: 14rem;
+
+
+    // Tablet: 768 x 1024
+    --founder-img-768: 150rem;
+    --founder-name-768: 16rem;
+    --position-roll-768: 12rem;
+    --quotes-768: 16rem;
+
+    // Laptop: 1366 x 768
+    --founder-img-1366: 200rem;
+    --founder-name-1366: 16rem;
+    --position-roll-1366: 12rem;
+    --quotes-1366: 20rem;
+
+    // High-res laptop or desktop: 1920 x 1080
+    --founder-img-1920: 200rem;
+    --founder-name-1920: 18rem;
+    --position-roll-1920: 14rem;
+    --quotes-1920: 24rem;
+
+}
+
+
 // -------LEFT FOUNDER CARD ---------
 .left_founder_card {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    column-gap: 31rem;
-    position: relative;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr;
+    grid-gap: 31rem;
 
     .founder_profile {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
 
         .founder_img {
             width: 200rem;
             height: auto;
         }
-
-        width: fit-content;
-        height: fit-content;
-        position: relative;
 
         .details {
             width: fit-content;
@@ -29,7 +69,7 @@
 
 
             .basic_info {
-                width: 180rem;
+                width: fit-content;
                 height: fit-content;
                 display: grid;
 
@@ -101,9 +141,9 @@
 // -------RIGHT FOUNDER CARD ---------
 .right_founder_card {
     width: 100%;
-    display: flex;
-    justify-content: end;
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr;
     column-gap: 31rem;
     position: relative;
 
@@ -199,5 +239,1243 @@
 
 }
 
-// -------------- MEDIA QUARY ------------------
-// Write for -- RESPONSIVE PAGE 
+// -------------- media quary ------------------
+// write for -- responsive page 
+
+// mobile: 360 x 640
+@media (min-width: 1px) and (max-width: 360px) {
+
+    // -------LEFT FOUNDER CARD ---------
+    .left_founder_card {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-360);
+                height: auto;
+            }
+
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: 80%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: 120rem;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-360);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-360);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-360);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05rem;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+
+    // -------RIGHT FOUNDER CARD ---------
+    .right_founder_card {
+        width: 100%;
+        display: grid;
+        justify-items: end;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-360);
+                height: auto;
+            }
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: -60%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: fit-content;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-360);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-360);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            grid-area: 2 / 1;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-360);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05px;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+
+}
+
+// mobile: 375 x 667
+@media (min-width: 360px) and (max-width: 375px) {
+
+    // -------LEFT FOUNDER CARD ---------
+    .left_founder_card {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-375);
+                height: auto;
+            }
+
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: 80%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: 120rem;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-375);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-375);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-375);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05rem;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+
+    // -------RIGHT FOUNDER CARD ---------
+    .right_founder_card {
+        width: 100%;
+        display: grid;
+        justify-items: end;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-375);
+                height: auto;
+            }
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: -60%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: fit-content;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-375);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-375);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            grid-area: 2 / 1;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-375);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05px;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+}
+
+// mobile: 411 x 731
+@media (min-width: 375px) and (max-width: 411px) {
+
+    // -------LEFT FOUNDER CARD ---------
+    .left_founder_card {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-411);
+                height: auto;
+            }
+
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: 80%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: 120rem;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-411);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-411);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-411);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05rem;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+
+    // -------RIGHT FOUNDER CARD ---------
+    .right_founder_card {
+        width: 100%;
+        display: grid;
+        justify-items: end;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-411);
+                height: auto;
+            }
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: -60%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: fit-content;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-411);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-360);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            grid-area: 2 / 1;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-411);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05px;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+}
+
+// tablet: 768 x 1024
+@media (min-width: 411px) and (max-width: 768px) {
+
+    // -------LEFT FOUNDER CARD ---------
+    .left_founder_card {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-768);
+                height: auto;
+            }
+
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: 80%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: 120rem;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-768);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-768);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-768);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05rem;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+
+    // -------RIGHT FOUNDER CARD ---------
+    .right_founder_card {
+        width: 100%;
+        display: grid;
+        justify-items: end;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-768);
+                height: auto;
+            }
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: -60%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: fit-content;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-768);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-768);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            grid-area: unset;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-768);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05px;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+}
+
+// laptop: 1366 x 768
+@media (min-width: 768px) and (max-width: 1366px) {
+
+
+    // -------LEFT FOUNDER CARD ---------
+    .left_founder_card {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-1366);
+                height: auto;
+            }
+
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: 80%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: 120rem;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-1366);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-1366);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-1366);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05rem;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+
+    // -------RIGHT FOUNDER CARD ---------
+    .right_founder_card {
+        width: 100%;
+        display: grid;
+        justify-items: end;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-1366);
+                height: auto;
+            }
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: -60%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: fit-content;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-1366);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-1366);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            grid-area: unset;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-1366);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05px;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+}
+
+// high-res laptop or desktop: 1920 x 1080
+@media (min-width: 1366px) and (max-width: 1920px) {
+
+    // -------LEFT FOUNDER CARD ---------
+    .left_founder_card {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-1920);
+                height: auto;
+            }
+
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: 80%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: 140rem;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-1920);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-1920);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-1920);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05rem;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+
+    // -------RIGHT FOUNDER CARD ---------
+    .right_founder_card {
+        width: 100%;
+        display: grid;
+        justify-items: end;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        grid-gap: 16rem;
+
+        .founder_profile {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            .founder_img {
+                width: var(--founder-img-1920);
+                height: auto;
+            }
+
+            .details {
+                width: fit-content;
+                height: fit-content;
+                display: grid;
+                flex-direction: row;
+                gap: 5rem;
+                position: absolute;
+                left: -60%;
+                top: 70%;
+
+
+                .basic_info {
+                    width: fit-content;
+                    height: fit-content;
+                    display: grid;
+
+                    .founder_name {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--founder-name-1920);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: 0.05rem;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+
+                    .divider {
+                        width: 100%;
+                        height: 1rem;
+                        background-color: var(--primary_color_800);
+                    }
+
+                    .position_roll {
+                        flex-grow: 0;
+                        font-family: var(--primary_font);
+                        font-size: var(--position-roll-1920);
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: var(--primary_color_900);
+                    }
+                }
+
+                .social_icon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    column-gap: 6rem;
+
+                }
+            }
+
+        }
+
+        .quotes {
+            grid-area: unset;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 0rem;
+
+            span {
+                font-family: var(--primary_font);
+                font-size: var(--quotes-1920);
+                font-weight: 400;
+                font-stretch: normal;
+                font-style: italic;
+                line-height: 1.33;
+                letter-spacing: 0.05px;
+                text-align: left;
+                color: var(--primary_color_700);
+            }
+        }
+
+
+    }
+}
