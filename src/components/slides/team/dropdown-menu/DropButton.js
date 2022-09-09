@@ -7,7 +7,7 @@ const DropButton = ({ toggleActiveStyle, FilterMenu, PositionValues }) => {
     return ( 
         <>
             <div div className="dropdwon-menu" >
-                <Select.Root>
+                <Select.Root onValueChange={FilterMenu}>
                     <Select.Trigger className="trigger-button">
                         <Select.Value placeholder="All"/>
                     </Select.Trigger>
@@ -15,7 +15,7 @@ const DropButton = ({ toggleActiveStyle, FilterMenu, PositionValues }) => {
                     <Select.Content className="content">
                         {
                             PositionValues.map((curElem, index) => {
-                                return ( <Select.Item value={curElem} className="select-item" key={index} onValueChange={() => FilterMenu(curElem, index)}>
+                                return ( <Select.Item value={curElem} className="select-item" key={index}>
                                             <Select.ItemText>{curElem}</Select.ItemText>
                                             <Select.ItemIndicator className="item-indicator">
                                                 <CheckIcon/>

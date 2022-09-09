@@ -8,31 +8,10 @@ import TeamDataBase from "../../../database/team/TeamDataBase";
 
 
 const Team = () => {
-
-    const allPositionValues = ["All", ...new Set(TeamDataBase.map((curElem) => curElem.position))];
-    const [TeamMembers, setTeamMembers] = useState(TeamDataBase);
-    const [PositionValues, setPositionValues] = useState(allPositionValues);
-
+    const memberRoles = ["All", ...new Set(TeamDataBase.map(t=>t.position))]
+    const [selectedPosition, setSelectedPosition] = useState("All")
     
-    const [appState, changeState] = useState({
-        activeObject: null,
-        TeamDataBase
-    })
-
-    const FilterMenu = (position, index) => {
-
-        changeState({ ...appState, activeObject: appState.TeamDataBase[index] });
-
-        if (position === "All") {
-            setTeamMembers(TeamDataBase);
-            return;
-        }
-        const updatedTeam = TeamDataBase.filter((curElem) => {
-            return curElem.position === position;
-        });
-
-        setTeamMembers(updatedTeam);
-    }
+    const filteredMember = TeamDataBase.filter(m => m.position === selectedPosition)
 
  // Toggle Activate
     function toggleActiveStyle(index) {
@@ -51,13 +30,13 @@ const Team = () => {
                     <SlideHeaderWrapper><SlideHeader>Team</SlideHeader></SlideHeaderWrapper>
                     <div className="team_categories_btn">
                         <DropButton
-                            PositionValues={PositionValues}
-                            FilterMenu={FilterMenu}
+                            PositionValues={memberRoles}
+                            FilterMenu={setSelectedPosition}
                             toggleActiveStyle={toggleActiveStyle}/>
                     </div>
                     <div className="teans_profile_container">
                         <TeamCard
-                            TeamMembers={TeamMembers} />
+                            TeamMembers={selectedPosition === "All" ? TeamDataBase : filteredMember} />
                     </div>
                 </div>
             </div>
