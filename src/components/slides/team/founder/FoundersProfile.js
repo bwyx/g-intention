@@ -5,6 +5,7 @@ import IconEmail from "../../../../public/assets/social_icon/sms.svg";
 import IconCall from "../../../../public/assets/social_icon/call-calling.svg";
 import IconLinkdin from "../../../../public/assets/social_icon/LinkedIn.svg";
 
+// Left Founder Card
 const LeftFounderCard = (props) => {
     console.log(props)
     return (
@@ -33,8 +34,7 @@ const LeftFounderCard = (props) => {
      );
 }
 
-
-
+// Right Founder Card
 const RightFounderCard = (props) => {
     console.log(props)
     return (

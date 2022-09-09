@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {LeftFounderCard, RightFounderCard} from "../../../components/slides/team/founder-card/FoundersProfile";
+import {LeftFounderCard, RightFounderCard} from "../../../components/slides/team/founder/FoundersProfile";
 import HarishSisodiya from '../../../public/assets/harish_sisodiya.svg';
 import AbhishekSingh from '../../../public/assets/abhishek_singh.svg';
 import { SlideHeaderWrapper, SlideHeader } from "../../../components/styled/SlideHeader";

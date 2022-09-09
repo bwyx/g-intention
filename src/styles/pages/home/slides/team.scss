@@ -1,34 +1,26 @@
 .slide_team {
     width: 100%;
     height: 100%;
-    font-size: 12rem;
-    font-weight: 600;
-    font-family: var(--primary_font);
-    text-transform: uppercase;
 
     .container {
         width: 100%;
         height: 100%;
         padding: var(--slide_padding);
         display: grid;
-        grid-template-rows: 0.05fr 1fr;
-        grid-gap: 5rem;
+        grid-template-rows: 0.05fr .5fr 1fr;
+        grid-template-columns: 1fr;
 
-        .header {
-            background-color: #CEE5D0;
-            border-radius: var(--main-radius);
+        .team_categories_btn {
             padding: var(--main-padding);
+
         }
 
-        .first_div {
-            background-color: #FCF8E8;
-            border-radius: var(--main-radius);
-            padding: var(--main-padding);
-        }
-
-        .second_div {
-            background-color: #66BFBF;
-            border-radius: var(--main-radius);
+        .teans_profile_container {
+            display: grid;
+            grid-template-rows: repeat(auto-fill, minmax(150rem, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250rem, 1fr));
+            justify-items: center;
+            align-items: center;
             padding: var(--main-padding);
         }
 
@@ -36,12 +28,36 @@
     }
 }
 
-@media only screen and (max-width: 550px) {
-    .container {
+// -------------- media quary ------------------
+// write for -- responsive page 
 
-        .slide_team {
+// (min-width: 1px) to (max-width: 768px)
+@media (min-width: 1px) and (max-width: 768px) {
 
-            .container {}
+    .slide_team {
+        width: 100%;
+        height: 100%;
+
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: var(--slide_padding);
+            display: grid;
+            grid-template-rows: 0.05fr 1fr;
+            grid-template-columns: 1fr 1fr;
+
+            .teans_profile_container {
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(150rem, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(250rem, 1fr));
+                justify-items: center;
+                align-items: center;
+                padding: var(--main-padding);
+                grid-column: 1 / 3;
+            }
+
+
         }
     }
+
 }

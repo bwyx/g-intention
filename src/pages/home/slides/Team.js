@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import { SlideHeaderWrapper, SlideHeader } from "../../../components/styled/SlideHeader";
 import TeamCard from "../../../components/slides/team/team/TeamCard";
 import HarishSisodiya from '../../../public/assets/harish_sisodiya.svg';
 import AbhishekSingh from '../../../public/assets/abhishek_singh.svg';
-import TeamMenuBarButton from "../../../components/slides/team/Button/TeamMenuBarButton";
+import DropButton from "../../../components/slides/team/dropdown-menu/DropButton";
 import TeamDataBase from "../../../database/team/TeamDataBase";
 
 
@@ -11,6 +12,7 @@ const Team = () => {
     const allPositionValues = ["All", ...new Set(TeamDataBase.map((curElem) => curElem.position))];
     const [TeamMembers, setTeamMembers] = useState(TeamDataBase);
     const [PositionValues, setPositionValues] = useState(allPositionValues);
+
     
     const [appState, changeState] = useState({
         activeObject: null,
@@ -44,11 +46,19 @@ const Team = () => {
 
     return ( 
         <>
-           
             <div className="slide_team">
                 <div className="container">
-                    <section className="header">Header</section>
-                    <div className="first_div">First Div</div>
+                    <SlideHeaderWrapper><SlideHeader>Team</SlideHeader></SlideHeaderWrapper>
+                    <div className="team_categories_btn">
+                        <DropButton
+                            PositionValues={PositionValues}
+                            FilterMenu={FilterMenu}
+                            toggleActiveStyle={toggleActiveStyle}/>
+                    </div>
+                    <div className="teans_profile_container">
+                        <TeamCard
+                            TeamMembers={TeamMembers} />
+                    </div>
                 </div>
             </div>
         </>

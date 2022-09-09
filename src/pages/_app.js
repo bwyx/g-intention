@@ -1,6 +1,5 @@
 // import global css from '../styles/';
 import 'material-icons/iconfont/material-icons.css'; // material-icons
-
 // GLOBAL SCSS
 import '../styles/global.scss'; // global
 
@@ -18,7 +17,7 @@ import '../styles/pages/home/slides/touch-with-us.scss'; // touch-with-us
 // -- TEAM
 import '../styles/components-css/slides/team/founder_card.scss'; // founder_card
 import '../styles/components-css/slides/team/teams_card.scss'; // teams_card
-import '../styles/components-css/slides/team/buttons.scss'; // buttons
+import '../styles/components-css/slides/team/drop_buttons.scss'; // buttons
 
 function G_INTENTION({ Component, pageProps }) {
   return <Component {...pageProps} />
